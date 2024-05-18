@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro Medico</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <link rel="stylesheet" href="css/registros.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="link-pagina">
+      <a class="pag" href="/Cerrar">Pagina Principal</a><br>
+      <a class="pag" href="/registro">Registro Paciente</a>
+    </div>
+    <div class="container">
+      <div class="login-container">
+        <form action="/InsertMedico" method="POST" class="form-login">
+          <div class="input">
+            <div class="sec">
+              <input type="text" class="form__input" name="Numdoc" placeholder="Numero Documento">
+            </div>
+            <div class="doscasillas">
+              <div class="sec">
+                <input type="text" class="form__input" name="Nombre" placeholder="Nombre">
+              </div>
+              <div class="sec">
+                <input type="text" class="form__input" name="Apellido" placeholder="Apellido">
+              </div>
+            </div>
+            <div class="sec">
+              <select type="text" class="form__input" name="Tipo" placeholder="Tipo De Documento">
+                <option>Cedula</option>
+              </select>
+            </div>
+            <div class="sec">
+              <input type="text" class="form__input" name="Numero" placeholder="Numero Telefonico">
+            </div>
+            <div class="sec">
+              <input type="email" class="form__input" name="Correo" placeholder="correo electrónico">
+            </div>
+            <div class="sec">
+              <select type="text" class="form__input" name="Rol" placeholder="rol">
+                <option>Medico</option>
+              </select>
+            </div>
+            <div class="sec">
+              <input type="text" class="form__input" name="Usu" placeholder="Usuario">
+            </div>
+            <div class="sec">
+              <input type="password" class="form__input" name="Cla" placeholder="contraseña">
+            </div>
+            <div class="sec">
+              <select type="text" class="form__input" name="Con" placeholder="Consultorio">
+                <option>Consultorio</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+            <button type="submit" class="button"> Ingresar </button><br>
+            <a class="pag" href="/login">Login</a>
+          </div>
+        </form>
+
+      </div>
+
+</body>
+
+</html>

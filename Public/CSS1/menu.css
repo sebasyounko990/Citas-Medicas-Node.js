@@ -1,0 +1,152 @@
+/* ----------------------------- *\
+        SECCION DE MENU
+\* ----------------------------- */
+
+.seccion-menu {
+    grid-area: menu;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-titulo {
+    text-align: center;
+    font-weight: 600px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.menu-link {
+    height: 45px;
+    width: 220px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+    font-size: 1em;
+    font-weight: 600px;
+    text-transform: uppercase;
+
+    border-radius: 25px;
+    border: 5px #ffffff;
+    box-shadow: inset 0px 2px 10px 0px rgba(0, 0, 0, .1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Define una transicion mediante su duracion */
+    transition: 1ms;
+}
+
+.menu-link:hover {
+    transform: scale(1.1);
+}
+
+#btnModal {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+}
+
+.menu-id {
+    width: 30px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+    display: none;
+}
+
+.menu-id::before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .6);
+    position: absolute;
+
+    /* Define la animacion de ID-Circulos en este sub-elemento*/
+    animation: animacion-circulo-menu 1s infinite alternate;
+}
+
+.menu-id#platzi-id {
+    position: relative;
+    left: 5px;
+}
+
+/* Clase que se asignara mediante JS */
+.menu-id.activo {
+    display: block;
+}
+
+/* ANIMACION ID-CIRCULOS */
+@keyframes animacion-circulo-menu {
+    100% {
+        transform: scale(1.5)
+    }
+}
+
+/* MEDIA QUERIES DE SECCION MENU */
+@media screen and (max-width: 1024px) {
+    .menu-titulo {
+        font-size: 0.9em;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(3, 250px);
+    }
+
+    .menu-link {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: repeat(3, minmax(140px, 220px));
+    }
+
+    .menu-link {
+        height: 40px;
+        width: 140px;
+        font-size: 0.5em;
+    }
+
+    .menu-id {
+        width: 8px;
+        height: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-titulo {
+        font-size: 0.8em;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(3, minmax(100px, 140px));
+    }
+
+    .menu-link {
+        height: 35px;
+        width: 100px;
+        font-size: 0.6em;
+    }
+
+    .menu-id {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+/* MEDIA QUERIES DE SECCION MENU */

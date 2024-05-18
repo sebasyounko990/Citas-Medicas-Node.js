@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>REGISTRO DE COMPRADOR</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+  <link rel="stylesheet" href="css/registros.css">
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="link-pagina">
+      <a class="pag" href="/Cerrar">Pagina Principal</a>
+      <a class="pag" href="/registroAdmin">Registro Admin</a>
+
+
+    </div>
+    <div class="container">
+      <form action="/InsertAdmin" method="POST" class="form-login">
+        <div class="input">
+          <div class="sec">
+            <label class="label">Numero Documento </label>
+            <input type="text" class="form__input" name="Numdoc" placeholder="Numero Documento">
+          </div>
+          <div class="sec">
+            <label class="label">Nombre </label>
+            <input type="text" class="form__input" name="Nombre" placeholder="Nombre">
+          </div>
+          <div class="sec">
+            <label class="label">Apellido </label>
+            <input type="text" class="form__input" name="Apellido" placeholder="Apellido">
+          </div>
+          <div class="sec">
+            <label class="label">Tipo de Documento </label>
+            <select type="text" class="form__input" name="Tipo" placeholder="Tipo De Documento">
+              <option>Seleccione</option>
+              <option>Cedula</option>
+            </select>
+          </div>
+          <div class="sec">
+            <label class="label">Numero Telefonico </label>
+            <input type="text" class="form__input" name="Numero" placeholder="Ingrese Numero Telefonico">
+          </div>
+          <div class="sec">
+            <label class="label">Correo electrónico </label>
+            <input type="email" class="form__input" name="Correo" placeholder="Ingrese correo electrónico">
+          </div>
+          <div class="sec">
+            <label class="label">Usuario </label>
+            <input type="text" class="form__input" name="Usu" placeholder="Ingrese Usuario">
+          </div>
+          <div class="sec">
+            <label class="label">Contraseña </label>
+            <input type="password" class="form__input" name="Cla" placeholder="Ingrese contraseña">
+          </div>
+
+
+
+          <button type="submit" class="button"> Ingresar </button><br>
+          <a class="pag" href="/login">Login</a>
+        </div>
+      </form>
+
+    </div>
+
+</body>
+
+</html>
